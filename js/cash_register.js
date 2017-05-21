@@ -80,19 +80,42 @@ buttonperiod.addEventListener('click', function(){
 var addNumbers = document.getElementById('add');
 addNumbers.addEventListener('click',
   function(){
-    var total = parseFloat(mainDisplay.innerHTML);
-    myCalculator.add();
+    var total = document.getElementById('display').innerHTML;
+    console.log("coffee", total);
+    myCalculator.add(parseFloat(total));
     clearDisplay("");
-
+    console.log(myCalculator);
   });
+
+var subNumbers = document.getElementById('subtract');
+  subNumbers.addEventListener('click',
+  function(){
+    var total = document.getElementById('display').innerHTML;
+    console.log('water', total);
+    myCalculator.subtract(parseFloat(total));
+    clearDisplay("");
+    console.log(myCalculator);
+  });
+
+var timesNumbers = document.getElementById('multiply');
+console.log("please", timesNumbers);
+  timesNumbers.addEventListener('click',
+  function(){
+    var total = document.getElementById('display').innerHTML;
+    console.log('cookie', total);
+    myCalculator.multiply(parseFloat(total));
+    clearDisplay("");
+    console.log(myCalculator);
+  });
+
 
 var equalButton = document.getElementById('equals');
 console.log(equalButton);
 equalButton.addEventListener('click', function(){
   clearDisplay("");
-   var total = myCalculator.getTotal();
+   //myCalculator.getTotal();
    console.log("total", total);
-   refreshDisplay(total);
+   refreshDisplay(parseFloat(total));
 
 
 });
