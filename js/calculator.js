@@ -3,29 +3,32 @@ function calculatorModule(){
   var total = 0;
   var calculator = {};
 
-function load (x){
-  if(typeof num === "number"){
-    total = num;
-    return total;
-
+  function load (x){
+    if(typeof num === "number"){
+      total = num;
+      return total;
+    }
   }
+
   function getTotal(x){
+   console.log("getTotal", total);
     return total;
   }
   function add(x){
-    num(x);
+    console.log("adding..", x);
     total += x;
+  console.log("total is now", total);
   }
   function subtract(x){
-    num(x);
+
     total -= x;
   }
   function multiply(x){
-    num(x);
+
     total *= x;
   }
   function divide(x){
-    num(x);
+
     total /= x;
   }
   function recallMemory(){
@@ -37,17 +40,17 @@ function load (x){
   function clearMemory(){
     memory = 0;
   }
-return{
-  load: load,
-  getTotal: getTotal,
-  add: add,
-  subtract: subtract,
-  multiply: multiply,
-  divide: divide,
-  recallMemory: recallMemory,
-  saveMemory: saveMemory,
-  clearMemory: clearMemory,
-};
+
+  return{
+    load: load,
+    getTotal: getTotal,
+    add: add,
+    subtract: subtract,
+    multiply: multiply,
+    divide: divide,
+    recallMemory: recallMemory,
+    saveMemory: saveMemory,
+    clearMemory: clearMemory,
+  };
 }
 
-}
