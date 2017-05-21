@@ -20,12 +20,14 @@ function calculatorModule(){
   console.log("total is now", total);
   }
   function subtract(x){
-
+console.log('subbbbb', x);
     total -= x;
+    console.log('exact total', total);
   }
   function multiply(x){
 
     total *= x;
+    console.log('example', total);
   }
   function divide(x){
 
