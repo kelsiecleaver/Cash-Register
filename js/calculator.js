@@ -42,6 +42,7 @@ function calculatorModule(){
     memory = 0;
   }
 
+
   return{
     load: load,
     getTotal: getTotal,

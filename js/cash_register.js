@@ -7,11 +7,13 @@ var saveNum = 0;
 var mainDisplay = document.getElementById('display');
 mainDisplay.innerHTML = regDisplay;
 
+// Update display
 function refreshDisplay(content){
   var calculatorDisplay = document.getElementById('display');
   calculatorDisplay.innerHTML = calculatorDisplay.innerHTML + content;
 }
 
+// Clear display/blank
 function clearDisplay(number){
   var calculatorDisplay = document.getElementById('display');
   calculatorDisplay.innerHTML = number;
