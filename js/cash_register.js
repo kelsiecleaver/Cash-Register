@@ -157,3 +157,9 @@ var depositButton = document.getElementById('depositCash');
   depositButton.addEventListener('click', function(){
     myCalculator.saveMemory();
 });
+
+  //Withdraw Button
+  var withdrawButton = document.getElementById('withdrawCash');
+  withdrawButton.addEventListener('click', function(){
+    myCalculator.clearMemory();
+  });
