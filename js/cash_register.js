@@ -13,7 +13,7 @@ function refreshDisplay(content){
   calculatorDisplay.innerHTML = calculatorDisplay.innerHTML + content;
 }
 
-// Clear display/blank
+// Clear display
 function clearDisplay(number){
   var calculatorDisplay = document.getElementById('display');
   calculatorDisplay.innerHTML = number;
@@ -145,3 +145,15 @@ var clearButton = document.getElementById('clear');
     myCalculator.clearMemory();
     clearDisplay('');
   });
+
+// Get balance button
+var getBalance = document.getElementById('getBalance');
+  getBalance.addEventListener('click', function(){
+    myCalculator.recallMemory();
+  });
+
+// Deposit button
+var depositButton = document.getElementById('depositCash');
+  depositButton.addEventListener('click', function(){
+    myCalculator.saveMemory();
+});
