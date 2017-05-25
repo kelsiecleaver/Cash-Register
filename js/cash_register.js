@@ -160,13 +160,8 @@ var depositButton = document.getElementById('depositCash');
 });
 
 //Withdraw Button
-// var withdrawButton = document.getElementById('withdrawCash');
-//   withdrawButton.addEventListener('click', function(){
-//     myCalculator.clearMemory();
-//   });
-
-withdrawCash.addEventListener('click', withdrawButton);
-  function withdrawButton(){
-    regDisplay = myCalculator.deleteMemory();
+var withdrawButton = document.getElementById('withdrawCash');
+  withdrawButton.addEventListener('click', function(){
     mainDisplay.innerHTML = myCalculator.clearMemory();
-  }
+  });
+
