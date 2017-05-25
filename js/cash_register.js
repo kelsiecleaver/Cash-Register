@@ -150,6 +150,7 @@ var clearButton = document.getElementById('clear');
 var getBalance = document.getElementById('getBalance');
   getBalance.addEventListener('click', function(){
     myCalculator.recallMemory();
+    mainDisplay.innerHTML = myCalculator.recallMemory();
   });
 
 // Deposit button
@@ -157,3 +158,15 @@ var depositButton = document.getElementById('depositCash');
   depositButton.addEventListener('click', function(){
     myCalculator.saveMemory();
 });
+
+//Withdraw Button
+// var withdrawButton = document.getElementById('withdrawCash');
+//   withdrawButton.addEventListener('click', function(){
+//     myCalculator.clearMemory();
+//   });
+
+withdrawCash.addEventListener('click', withdrawButton);
+  function withdrawButton(){
+    regDisplay = myCalculator.deleteMemory();
+    mainDisplay.innerHTML = myCalculator.clearMemory();
+  }
