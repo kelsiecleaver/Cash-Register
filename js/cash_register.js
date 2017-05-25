@@ -159,10 +159,10 @@ var depositButton = document.getElementById('depositCash');
     myCalculator.saveMemory();
 });
 
-//Withdraw Button
-var withdrawButton = document.getElementById('withdrawCash');
+
+  //Withdraw Button
+  var withdrawButton = document.getElementById('withdrawCash');
   withdrawButton.addEventListener('click', function(){
     myCalculator.clearMemory();
-    mainDisplay.innerHTML
   });
 
