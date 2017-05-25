@@ -142,27 +142,31 @@ equalButton.addEventListener('click', function(){
 // Clear function/button
 var clearButton = document.getElementById('clear');
   clearButton.addEventListener('click', function(){
-    myCalculator.clearMemory();
+    //myCalculator.clearMemory();
     clearDisplay('');
   });
 
 // Get balance button
 var getBalance = document.getElementById('getBalance');
   getBalance.addEventListener('click', function(){
-    myCalculator.recallMemory();
     mainDisplay.innerHTML = myCalculator.recallMemory();
+
   });
 
 // Deposit button
 var depositButton = document.getElementById('depositCash');
   depositButton.addEventListener('click', function(){
-    myCalculator.saveMemory();
+    var balance = myCalculator.recallMemory();
+    balance += parseFloat(mainDisplay.innerHTML);
+    myCalculator.saveMemory(balance);
 });
 
 
   //Withdraw Button
   var withdrawButton = document.getElementById('withdrawCash');
   withdrawButton.addEventListener('click', function(){
-    myCalculator.clearMemory();
+    var balance = myCalculator.recallMemory();
+    balance -= parseFloat(mainDisplay.innerHTML);
+    myCalculator.saveMemory(balance);
   });
 
